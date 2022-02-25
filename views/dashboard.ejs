@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/admintheme.js" defer></script>
+    <title>Dashboard</title>
+</head>
+<body id="body">
+
+    <div class="nav-icon" style="top: 10px;" id="back" onclick="window.location.href = '/admin/logout';"> 
+      <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: 16px; margin-right: 6px;" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 15 15">
+        <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+        <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+      </svg>
+    </div>
+
+    <div class="logo">
+        <img class="logopic" id="logopic" src="" alt="">
+        <div class="titleBanner">
+          <h1 id="resname">Resturant Name</h1>
+          <h2 id="adminName">Welcome, Admin </h2>
+        </div>
+    </div>
+
+    <div class="menu dashmenu">
+
+        <div class="product-box" style="cursor: pointer;" onclick="window.location.href = './edit-menu';">
+            <div class="container dash">
+              <img src="http://localhost:3000/img/menu-icon-dashboard.png" alt="cookies" class="item-image"/>
+              <div class="information">
+                <div class="name">Menu</div>
+                <div class="descr">Edit Menu Items</div>
+              </div>
+            </div> 
+        </div> 
+
+        <div class="product-box" style="cursor: pointer;">
+            <div class="container dash">
+              <img src="http://localhost:3000/img/order-icon-dashboard.png" alt="cookies" class="item-image"/>
+              <div class="information">
+                <div class="name">Orders</div>
+                <div class="descr">Recived Orders From Tables</div>
+              </div> <!-- end information -->
+            </div> <!-- end container -->
+        </div> <!-- end product-box -->
+
+        <div class="product-box" style="cursor: pointer;" onclick="window.location.href = '/setting';">
+          <div class="container dash">
+            <img src="http://localhost:3000/img/settings-icon-dashboard.png" alt="cookies" class="item-image"/>
+            <div class="information">
+              <div class="name">Settings</div>
+              <div class="descr">Set General Resturant Settings</div>
+            </div> <!-- end information -->
+          </div> <!-- end container -->
+      </div> <!-- end product-box -->
+
+    </div>
+
+    <div class="spacer" ></div>
+</body>
+</html>

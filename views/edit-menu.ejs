@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/admintheme.js" defer></script>
+    <script src="js/setadmin.js" defer> </script>
+    <script src="js/control.js" defer> </script>
+    <title>Menu</title>
+</head>
+<body id="body">
+
+    <div class="nav-icon" id="add-new" >  
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16" style="margin-top: 17px;">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+        </svg>
+    </div>
+
+    <div class="nav-icon" id="go-back" style="top: 65px;" onclick="window.location.href = '/dashboard';"> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16" style="margin-top: 17px; ">
+            <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
+        </svg> 
+    </div>
+
+    <div class="logo">
+        <img class="logopic" id="logopic" src="" alt="">
+        <div class="titleBanner">
+            <h1 id="resname">Resturant Name</h1>
+        </div>
+    </div>
+
+    <div id="add-form" style="display: none;">
+        <h2 >Edit</h2>
+        <h3> Add new item to menu</h3>
+        <form class="box" action="/add/menu/" method="POST" enctype="multipart/form-data">
+            <input type="checkbox" name="available" value="available" checked>
+            <label for="available"> Available </label><br>
+            <input type="text" name="name" placeholder="item name" required>
+            <input type="text" name="desc" placeholder="item description">
+            <input type="number" name="price" step="0.01" placeholder="item price" required>
+            <select class="addnewcategory-dropdown" id="addcatedropdown" name="cate">
+
+            </select>
+            <input type="file" name="image" accept=".png,.jpg,.jpeg">
+            <input type="submit" name="" value="add">
+        </form>
+
+        <h3> Add new category </h3>
+        <form class="box" action="/add/category/" method="POST" enctype="multipart/form-data">
+            <div class="setting-format">
+                <input type="text" name="name" placeholder="category name" required>
+                <input type="submit" name="" value="add">
+            </div>
+        </form>
+
+        <h3> Delete existing category </h3>
+        <form class="box" action="/delete/category/" method="POST" enctype="multipart/form-data">
+            <div class="setting-format">
+                <select class="addnewcategory-dropdown" id="addcatedropdown" name="cate">
+
+                </select>
+                <input type="submit" name="" value="delete">
+            </div>
+        </form>
+    </div>
+
+    <div class="category">
+        <ul class="categmenu" id="categmenu">
+
+        </ul>
+    </div>
+
+    <div class="menu" id="menu"> 
+
+    </div>
+</body>
+
+</html>

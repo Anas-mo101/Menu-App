@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/admintheme.js" defer></script>
+</head>
+<body id="body">
+
+    <div class="logo">
+        <img class="logopic" id="logopic" src="" alt="">
+        <div class="titleBanner">
+            <h1 id="resname">Resturant Name</h1>
+            <h2>General Settings</h2>
+        </div>
+    </div>
+
+    <div class="nav-icon" style="top: 10px;" id="back" onclick="window.location.href = '/dashboard';"> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16" style="margin-top: 17px;">
+            <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
+        </svg> 
+    </div>
+
+    <div class="form-container" id="add-form">
+        <h3> Resturant Settings </h3>
+        <form class="box" action="/settings/resturant" method="POST" enctype="multipart/form-data">
+            <div class="setting-format">
+                <input type="text" name="name" placeholder="resturant name" required>
+                <input type="submit" name="" value="update">
+            </div>
+        </form>
+
+        <h3> Theme Settings </h3>
+        <form class="box" action="/settings/theme/logo" method="POST" enctype="multipart/form-data">
+            <label for="available"> Resturant Logo </label><br>
+            <div class="setting-format">
+                <input type="file" name="logo" accept=".png,.jpg,.jpeg" required>
+                <input type="submit" name="" value="update">
+            </div>
+        </form>
+        <form class="box" action="/settings/theme/background" method="POST" enctype="multipart/form-data">
+            <label for="available"> Background </label><br>
+            <div class="setting-format">
+                <input type="file" name="bckgrd" accept=".png,.jpg,.jpeg" required>
+                <input type="submit" name="" value="update">
+            </div>
+        </form>
+        <form class="box" action="/settings/theme/colors" method="POST" enctype="multipart/form-data">
+            <div class="setting-format">
+                <div style="margin: 0 auto;">
+                    <br>
+                    <input type="color" name="colTwo" value="#000080" style="margin: 0 10px;">
+                    <input type="color" name="colOne" value="#ff0000" style="margin: 0 10px;">
+                    <br>
+                </div>
+                <input type="submit" name="" value="update">
+            </div>
+        </form>
+    </div>
+    
+    <div class="spacer">  </div>
+</body>
+</html>
